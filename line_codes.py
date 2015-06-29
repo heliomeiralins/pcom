@@ -1,4 +1,4 @@
-from bitstring import BitArray
+from bitstring import Bits
 
 
 def tick(it):
@@ -7,7 +7,22 @@ def tick(it):
         yield (0, x)
 
 
-class BinaryData(BitArray):
+class BinaryData:
+
+    def __init__(self, *args, **kwargs):
+        self.set_data(*args, **kwargs)
+
+    def __iter__(self):
+        return iter(self.data)
+
+    def __getitem__(self, index):
+        return self.data[index]
+
+    def __len__(self):
+        return len(self.data)
+
+    def set_data(self, *args, **kwargs):
+        self.data = Bits(*args, **kwargs)
 
     def nrz_l(self):
         return (1 if x else -1 for x in self)
