@@ -40,9 +40,23 @@ class TestLineCodes(unittest.TestCase):
                 0, 0, -1, 0, 1, 0, 0, 0, -1, 0]
         )
 
-    @unittest.skip('Not implemented')
     def test_hdb3(self):
-        raise NotImplementedError
+        b = BinaryData('0b10000')
+        self.assertEqual(
+            list(b.hdb3()),
+            [1, 0, 0, 0, 1]
+        )
+        c = BinaryData('0b010111000010110100000000001011010100001')
+        self.assertEqual(
+            list(c.hdb3()),
+            [0, 1, 0, -1, 1, -1, 0, 0, 0, -1, 1, 0, -1, 1, 0, -1, 1, 0, 0,
+             1, -1, 0, 0, -1, 0, 0, 1, 0, -1, 1, 0, -1, 0, 1, 0, 0, 0, 1, -1]
+        )
+        d = BinaryData('0b0101110000')
+        self.assertEqual(
+            list(d.hdb3()),
+            [0, 1, 0, -1, 1, -1, 0, 0, 0, -1]
+        )
 
     def test_manchester(self):
         self.assertEqual(

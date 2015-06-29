@@ -21,6 +21,7 @@ LINE_CODES = {
     'AMI': ('ami', 2),
     'Manchester': ('manchester', 2),
     'Manchester Diferencial': ('dif_manchester', 2),
+    'HDB-3': ('hdb3', 1),
 }
 
 

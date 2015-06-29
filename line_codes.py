@@ -50,6 +50,28 @@ class BinaryData:
                 yield 0
                 yield 0
 
+    def hdb3(self):
+        data = self.data.bin
+        parity = -1  # primeira substituicao sempre é por 000V
+        last = -1
+        hdb3 = []
+        for segment in data.split('0000'):
+            for x in segment:
+                if x == '1':
+                    last = -last
+                    hdb3.append(last)
+                    parity = 1 - parity
+                else:
+                    hdb3.append(0)
+            if parity == 0:
+                last = -last
+                hdb3.extend([last, 0, 0, last])
+            else:  # parity =1 ou primeira substituicao
+                hdb3.extend([0, 0, 0, last])
+            parity = 0
+        del hdb3[-4:]
+        return hdb3
+
     def manchester(self, IEEE=None):
         if IEEE:
             return (2 * (clock ^ bit) - 1 for clock, bit in tick(self))
