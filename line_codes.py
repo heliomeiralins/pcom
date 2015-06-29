@@ -45,7 +45,9 @@ class BinaryData:
             if x:
                 last = -last
                 yield last
+                yield 0
             else:
+                yield 0
                 yield 0
 
     def manchester(self, IEEE=None):
