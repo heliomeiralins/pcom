@@ -22,6 +22,7 @@ LINE_CODES = {
     'Manchester': ('manchester', 2),
     'Manchester Diferencial': ('dif_manchester', 2),
     'HDB-3': ('hdb3', 1),
+    'MLT-3': ('mlt3', 1),
 }
 
 

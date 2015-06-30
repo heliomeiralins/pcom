@@ -71,3 +71,14 @@ class TestLineCodes(unittest.TestCase):
             [-1, 1, -1, -1, 1, -1, 1, -1, 1, 1, -1, -1,
                 1, 1, -1, 1, -1, 1, -1, -1, 1, -1]
         )
+
+    def test_mlt3(self):
+        self.assertEqual(
+            list(self.b.mlt3()),
+            [1, 1, 0, -1, -1, -1, -1, 0, 1, 1, 0]
+        )
+        c = BinaryData('0b10100111001')
+        self.assertEqual(
+            list(c.mlt3()),
+            [1, 1, 0, 0, 0, -1, 0, 1, 1, 1, 0]
+        )

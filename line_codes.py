@@ -1,3 +1,5 @@
+from itertools import cycle
+
 from bitstring import Bits
 
 
@@ -86,6 +88,14 @@ class BinaryData:
                 last = -1 * last
                 yield last
                 yield last
+
+    def mlt3(self):
+        last = 0
+        bit = cycle((1, 0, -1, 0))
+        for x in self:
+            if x:
+                last = next(bit)
+            yield last
 
     def marca(self, change=1, start=1):
         if self[0] == change:
