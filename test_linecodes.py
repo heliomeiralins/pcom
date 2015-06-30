@@ -82,3 +82,11 @@ class TestLineCodes(unittest.TestCase):
             list(c.mlt3()),
             [1, 1, 0, 0, 0, -1, 0, 1, 1, 1, 0]
         )
+
+    def test_miller(self):
+        c = BinaryData('0b11001011000111101')
+        self.assertEqual(
+            list(c.miller()),
+            [-1, 1, 1, -1, -1, -1, 1, 1, 1, -1, -1, -1, -1, 1, 1, -1, -1, -1,
+                1, 1, -1, -1, -1, 1, 1, -1, -1, 1, 1, -1, -1, -1, -1, 1]
+        )

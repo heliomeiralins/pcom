@@ -97,6 +97,22 @@ class BinaryData:
                 last = next(bit)
             yield last
 
+    def miller(self):
+        last = -1
+        preceded_by_zero = 0
+        for x in self:
+            if x:
+                yield last
+                last = -last
+                yield last
+                preceded_by_zero = 0
+            else:
+                if preceded_by_zero:
+                    last = -last
+                yield last
+                yield last
+                preceded_by_zero = 1 - 0
+
     def marca(self, change=1, start=1):
         if self[0] == change:
             last_bit = 1 - start

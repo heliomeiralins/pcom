@@ -23,6 +23,7 @@ LINE_CODES = {
     'Manchester Diferencial': ('dif_manchester', 2),
     'HDB-3': ('hdb3', 1),
     'MLT-3': ('mlt3', 1),
+    'Miller / Delay': ('miller', 2),
 }
 
 
