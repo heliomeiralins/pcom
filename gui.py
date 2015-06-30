@@ -49,9 +49,9 @@ class LineCodesApp(tk.Frame):
         self.entry.bind('<Key-Return>', self.set_input)
         self.entry.grid(row=0, column=1, sticky=tk.W)
 
-        choices = LINE_CODES.keys()
+        choices = sorted(LINE_CODES.keys())
         self.line_code = tk.StringVar()
-        self.line_code.set('Manchester')
+        self.line_code.set(choices[0])
         self.box = tk.OptionMenu(
             input_frame, self.line_code, *choices, command=self.change_option)
         self.box.grid(row=1, column=1, sticky=tk.W + tk.E)
