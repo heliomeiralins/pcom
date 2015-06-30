@@ -1,7 +1,5 @@
 # Projeto PCOM
 
-## Equipe
+### Hélio de Meira Lins Neto
 
-* Danilo Dias
-* Egle Luis
-* Hélio Meira Lins
+[Apresentação](https://docs.google.com/presentation/d/1-C90Hhd0WLKrnETZ7lLb8w6Xbx-NkMfpfiIArcLuCl4/edit?usp=sharing)
