@@ -120,7 +120,7 @@ class BinaryData:
                     last = -last
                 yield last
                 yield last
-                preceded_by_zero = 1 - 0
+                preceded_by_zero = 1
 
     def marca(self, change=1, start=1):
         if self[0] == change:
