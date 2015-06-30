@@ -42,11 +42,11 @@ class BinaryData:
         polar = (1 if x else -1 for x in self)
         return (clock * bit for clock, bit in tick(polar))
 
-    def ami(self, last=-1):
+    def ami(self):
+        bit = cycle((1, -1))
         for x in self:
             if x:
-                last = -last
-                yield last
+                yield next(bit)
                 yield 0
             else:
                 yield 0
