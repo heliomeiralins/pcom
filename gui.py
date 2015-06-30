@@ -18,7 +18,7 @@ LINE_CODES = {
     'NRZ-S': ('nrz_s', 1),
     'Unipolar RZ': ('unipolar_rz', 2),
     'Polar RZ': ('polar_rz', 2),
-    'AMI': ('ami', 2),
+    'AMI': ('ami', 1),
     'Manchester': ('manchester', 2),
     'Manchester Diferencial': ('dif_manchester', 2),
     'HDB-3': ('hdb3', 1),

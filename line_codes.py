@@ -47,9 +47,7 @@ class BinaryData:
         for x in self:
             if x:
                 yield next(bit)
-                yield 0
             else:
-                yield 0
                 yield 0
 
     def hdb3(self):

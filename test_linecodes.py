@@ -36,8 +36,7 @@ class TestLineCodes(unittest.TestCase):
     def test_ami(self):
         self.assertEqual(
             list(self.b.ami()),
-            [1, 0, 0, 0, -1, 0, 1, 0, 0, 0, 0, 0,
-                0, 0, -1, 0, 1, 0, 0, 0, -1, 0]
+            [1, 0, -1, 1, 0, 0, 0, -1, 1, 0, -1]
         )
 
     def test_hdb3(self):
