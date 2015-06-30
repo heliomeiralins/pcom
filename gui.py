@@ -24,6 +24,7 @@ LINE_CODES = {
     'HDB-3': ('hdb3', 1),
     'MLT-3': ('mlt3', 1),
     'Miller / Delay': ('miller', 2),
+    'CMI': ('cmi', 2),
 }
 
 

@@ -50,6 +50,17 @@ class BinaryData:
             else:
                 yield 0
 
+    def cmi(self):
+        bit = cycle((1, -1))
+        for x in self:
+            if x:
+                b = next(bit)
+                yield b
+                yield b
+            else:
+                yield -1
+                yield 1
+
     def hdb3(self):
         data = self.data.bin
         parity = -1  # primeira substituicao sempre é por 000V
