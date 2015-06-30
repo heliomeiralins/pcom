@@ -13,14 +13,14 @@ DY = 40
 
 
 LINE_CODES = {
-    'NRZ-L': ('nrz_l', 1),
-    'NRZ-M': ('nrz_m', 1),
-    'NRZ-S': ('nrz_s', 1),
+    'Polar NRZ-L': ('nrz_l', 1),
+    'Polar NRZ-M': ('nrz_m', 1),
+    'Polar NRZ-S': ('nrz_s', 1),
     'Unipolar RZ': ('unipolar_rz', 2),
     'Polar RZ': ('polar_rz', 2),
     'AMI': ('ami', 1),
     'Manchester': ('manchester', 2),
-    'Manchester Diferencial': ('dif_manchester', 2),
+    'Manchester Diferencial (BMC)': ('dif_manchester', 2),
     'HDB-3': ('hdb3', 1),
     'MLT-3': ('mlt3', 1),
     'Miller / Delay': ('miller', 2),
